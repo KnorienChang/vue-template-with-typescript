@@ -7,5 +7,9 @@
 <script lang="ts">
 import { Vue } from 'vue-property-decorator';
 
-export default class Home extends Vue {}
+export default class Test extends Vue {
+  private mounted(): void {
+    console.log(Date.now(), 'test');
+  }
+}
 </script>
