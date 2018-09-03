@@ -3,7 +3,7 @@ module.exports = {
     open: true,
     proxy: {
       '^/v1': {
-        target: 'https://elm.cangdu.org/v1',
+        target: 'https://elm.cangdu.org/',
         changeOrigin: true,
         ws: true,
         pathRewrite: {
@@ -11,7 +11,7 @@ module.exports = {
         }
       },
       '^/v2': {
-        target: 'https://elm.cangdu.org/v2',
+        target: 'https://elm.cangdu.org/',
         changeOrigin: true,
         ws: true,
         pathRewrite: {
@@ -21,4 +21,4 @@ module.exports = {
     }
   },
   productionSourceMap: false
-}
+};

@@ -17,6 +17,7 @@
     "no-consecutive-blank-lines": false,
     "no-console": false,
     "only-arrow-functions": false,
-    "prefer-const": false
+    "prefer-const": false,
+    "no-namespace": false
   }
 }
