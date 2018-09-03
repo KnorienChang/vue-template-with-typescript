@@ -55,7 +55,6 @@ export function fetch(options: any) {
     );
 
     instance(options).then((res) => {
-      console.log(res, 'axios');
       resolve(res.data);
     }).catch((error) => {
       console.log(error);
