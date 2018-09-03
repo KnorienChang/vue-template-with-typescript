@@ -2,7 +2,14 @@
   <div class="test">
     dis test page
     <br />
-    {{hotCities}}
+    <!--{{hotCities}}-->
+    <ul>
+      <template v-for="item in hotCities">
+        <li :key="item.id">
+          地址：<label>{{item.name}}</label>
+        </li>
+      </template>
+    </ul>
   </div>
 </template>
 
@@ -18,8 +25,13 @@ export default class Test extends Vue {
   }
 
   get hotCities() {
-    console.log(this.$store.getters);
-    return this.$store.getters.hotCities || [];
+    return this.$store.getters.hotCities;
   }
 }
 </script>
+
+<style lang="scss">
+  ul, li {
+    list-style: none;
+  }
+</style>
