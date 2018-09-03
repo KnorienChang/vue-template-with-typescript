@@ -8,7 +8,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import { fetch } from '@/utils/axios';
 
 @Component({
   components: {
@@ -18,14 +17,7 @@ import { fetch } from '@/utils/axios';
 export default class Home extends Vue {
   private mounted(): void {
     console.log(Date.now(), 'home');
-    fetch({
-      url: '/v1/cities',
-      params: {
-        type: 'hot',
-      },
-    }).then((res) => {
-      console.log(res);
-    }).catch(console.error);
+
   }
 }
 </script>
