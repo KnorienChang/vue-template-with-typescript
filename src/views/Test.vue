@@ -5,8 +5,9 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
+@Component
 export default class Test extends Vue {
   private mounted(): void {
     console.log(Date.now(), 'test');
